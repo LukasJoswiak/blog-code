@@ -7,3 +7,4 @@ jobs:
        - uses: actions/checkout@v2
        - name: make
          run: make
+         working-directory: ./2020/github-actions-protobuf
