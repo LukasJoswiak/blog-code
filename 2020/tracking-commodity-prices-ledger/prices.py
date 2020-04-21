@@ -54,7 +54,7 @@ if __name__ == '__main__':
     # For logging purposes
     print(datetime)
 
-    with open(PRICES_FILE) as f:
+    with open(PRICES_FILE, 'r') as f:
         prices = f.readlines()
     prices = [x.strip().split() for x in prices]
 
@@ -65,7 +65,7 @@ if __name__ == '__main__':
             lines += [line]
 
     if len(lines) > 0:
-        with open(PRICES_FILE) as f:
+        with open(PRICES_FILE, 'a') as f:
             f.write('\n')
             for line in lines:
                 print(f'writing {line.strip()}')
